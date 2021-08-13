@@ -2,7 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const HOSTURL = process.env.REACT_APP_API_HOST;
+
 function App() {
+fetch(`/events`, { method: 'GET' })
+  .then(res => res.json())
+  .then(events => console.log('EVENTS ', events));
+
   return (
     <div className="App">
       <header className="App-header">
