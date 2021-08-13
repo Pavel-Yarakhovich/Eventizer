@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { startMockServer } from './__mocks__/mockServer';
+
+if (process.env.NODE_ENV !== 'production') {
+  startMockServer();
+};
 
 ReactDOM.render(
   <React.StrictMode>
