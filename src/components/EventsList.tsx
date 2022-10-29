@@ -51,7 +51,7 @@ const EventsList: React.FC<Props> = ({
         <Spinner show={loading} />
       </SpinnerWrapper>
     );
-  if (error) return <p>Error: {error}</p>;
+  if (error) return <p>Error: </p>; //{error}
 
   return (
     <EventsContainer>
